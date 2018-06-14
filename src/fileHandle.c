@@ -31,7 +31,6 @@ void countFromFile(struct stack *top, char *phrase, int counter) {
             fprintf(scoreFile, "%d) %.3lf\n", counter, finalResult);
             counter++;
         }
-        printf("\nWynik: %lf\n", finalResult);
         strcpy(phrase, "");
     }
     printf("\nWyniki wyrazen z pliku znajdziesz w %s", scorePath);
