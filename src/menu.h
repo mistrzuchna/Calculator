@@ -13,5 +13,4 @@ bool stepByStepVersion();
 
 void phraseInput(char *phrase);
 
-
 #endif //CALCULATOR_MENU_H

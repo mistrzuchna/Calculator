@@ -5,7 +5,7 @@
 #include "stackHandle.h"
 #include "menu.h"
 
-float finalResult;
+double finalResult;
 
 void ONPCalculations(char *phraseInONP, struct stack *top);
 

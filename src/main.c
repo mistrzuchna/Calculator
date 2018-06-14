@@ -7,9 +7,8 @@
 
 int main() {
     struct stack *top = NULL;
-    int option, whatToDo = 1, counter = 0;
+    int option, whatToDo = 1, counter = 1;
     char ONPFromAlgebraicForm[100] = "";
-
 
     while (whatToDo == 1) {
         printMenu();
@@ -23,14 +22,11 @@ int main() {
             if (isONP(phrase)) {
                 if (isNumberOfOperatorsCorrect(phrase)) {
                     ONPCalculations(phrase, top);
-                    printf("\nWynik: %lf\n", finalResult);
                 }
             } else if (!isONP(phrase) && isNumberOfOperatorsCorrect(phrase)
                        && isNumberOfBracketsCorrect(phrase)) {
                 algebraicToONP(phrase, top, ONPFromAlgebraicForm);
                 ONPCalculations(ONPFromAlgebraicForm, top);
-                printf("\nWynik: %lf\n", finalResult);
-
             }
         } else if (userChoice == 1) {
             countFromFile(top, ONPFromAlgebraicForm, counter);

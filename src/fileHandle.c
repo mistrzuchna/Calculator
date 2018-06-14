@@ -10,7 +10,7 @@ void countFromFile(struct stack *top, char *phrase, int counter) {
     char singleLine[50] = "";
 
     filePathNameChange(filePath, scorePath);
-    FILE *scoreFile = fopen(scorePath, "w+");
+    FILE *scoreFile = fopen(scorePath, "w");
 
 
     while (!feof(file)) {
@@ -28,13 +28,13 @@ void countFromFile(struct stack *top, char *phrase, int counter) {
                    && isNumberOfBracketsCorrect(singleLine)) {
             algebraicToONP(singleLine, top, phrase);
             ONPCalculations(phrase, top);
-            counter++;
             fprintf(scoreFile, "%d) %.3lf\n", counter, finalResult);
+            counter++;
         }
         printf("\nWynik: %lf\n", finalResult);
         strcpy(phrase, "");
     }
-
+    printf("\nWyniki wyrazen z pliku znajdziesz w %s", scorePath);
     puts("");
 }
 

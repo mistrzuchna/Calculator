@@ -15,7 +15,7 @@ void algebraicToONP(char *phraseInAlgebraicForm, struct stack *top, char *ONPFro
             strcat(ONPFromAlgebraic, token);
             strcat(ONPFromAlgebraic, s);
             if (stepByStep) {
-                printf("Dopisanie liczby %s do nowej postaci ONP.\n", token);
+                printf("Dopisanie liczby %s do tworzonej przez program postaci ONP.\n", token);
                 printf("Dotychczasowe ONP po operacji:\n");
                 printf("%s\n", ONPFromAlgebraic);
                 printf("Stos po operacji:\n");

@@ -39,7 +39,6 @@ bool isNumberOfOperatorsCorrect(char *phrase) {
                  *token == '%' || *token == '^' ||
                  *token == '=')
             operatorsCounter++;
-
         else {
             printf("Niepoprawny element w wyrazeniu! Sprawdz poprawnosc wpisanych danych.");
             return false;
